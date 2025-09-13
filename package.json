@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "Amazon": "wdio run ./wdio.conf.js --spec ./Test/s24.spec.js"
   },
   "author": "",
   "license": "ISC",
