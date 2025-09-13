@@ -26,7 +26,8 @@ describe('Amazon Search', () => {
         }
         history.push(record);
         fs.writeFileSync('./Data/priceHistory.json', JSON.stringify(history));
-        await sendMail('Amazon Price Alert', `Price for ${title} is now ${price}`);
+        //await sendMail('Amazon Price Alert', `price details are as follows: ${JSON.stringify(history)}`);
+        await sendMail('Amazon Price Alert', `Price for ${title} is ${price} now `);//
         console.log('Email sent successfully');
         
     })
