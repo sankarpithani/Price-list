@@ -1,3 +1,5 @@
+const isHeadless = process.env.HEADLESS === 'true' || process.env.CI === 'true'
+
 exports.config = {
     //
     // ====================
@@ -54,13 +56,17 @@ exports.config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: [
-                '--headless',
-                '--no-sandbox',
-                '--disable-dev-shm-usage',
-                '--disable-gpu',
-                '--window-size=1920,1080'
-            ]
+            args: isHeadless
+                ? [
+                    '--headless',
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage',
+                    '--disable-gpu',
+                    '--window-size=1920,1080'
+                  ]
+                : [
+                    '--start-maximized'
+                  ]
         }
     }],
 

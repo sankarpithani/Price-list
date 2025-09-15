@@ -3,7 +3,7 @@ class AmazonLoginPage{
         await browser.url('https://www.amazon.in/');
     }
     get searchInput(){
-        return $('#twotabsearchtextbox');
+        return $("//input[@id='twotabsearchtextbox']");
     }
     get firstSearchResultTitle(){
         // More stable selector for first search result title on Amazon search page

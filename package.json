@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
     "Amazon": "wdio run ./wdio.conf.js --spec ./Test/s24.spec.js",
-    "jenkins": "wdio run ./wdio.conf.js --spec ./Test/s24.spec.js --headless"
+    "jenkins": "HEADLESS=true wdio run ./wdio.conf.js --spec ./Test/s24.spec.js"
   },
   "author": "",
   "license": "ISC",
